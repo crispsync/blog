@@ -10,7 +10,7 @@ if (isGithubActions) {
   // Manually set the repository name
   const repo = 'blog'; // This should match your repository name
   assetPrefix = `/${repo}/`;
-  basePath = `/${repo}${}
+  basePath = `/${repo}`
 }
 
 export default {
@@ -21,5 +21,5 @@ export default {
   images: {
     unoptimized: true,
   },
-  output: 'export',
+  output: 'export'
 };
