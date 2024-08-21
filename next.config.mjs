@@ -1,4 +1,19 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {};
+const isGithubActions = process.env.GITHUB_ACTIONS || false;
+let assetPrefix = '';
+let basePath = '';
 
-export default nextConfig;
+if (isGithubActions) {
+  const repo = process.env.GITHUB_REPOSITORY.replace(/.*?\//, '');
+  assetPrefix = `/${repo}/`;
+  basePath = `/${repo}`;
+}
+
+export default {
+  reactStrictMode: true,
+  assetPrefix: assetPrefix,
+  basePath: basePath,
+  trailingSlash: true,
+  images: {
+    unoptimized: true,
+  },
+};

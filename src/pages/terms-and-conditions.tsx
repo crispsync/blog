@@ -17,7 +17,7 @@ const TermsAndConditions: React.FC = () => {
       </p>
       <h2 className="text-2xl font-bold mb-2">Disclaimer of Warranties</h2>
       <p className="mb-4">
-        Our website and services are provided "as is" without any warranties, express or implied. We do not guarantee that our website will be error-free, secure, or available at all times. Your use of our website is at your own risk.
+        Our website and services are provided as is without any warranties, express or implied. We do not guarantee that our website will be error-free, secure, or available at all times. Your use of our website is at your own risk.
       </p>
       <h2 className="text-2xl font-bold mb-2">Limitation of Liability</h2>
       <p className="mb-4">

@@ -9,7 +9,7 @@ const About: React.FC = () => {
         We provide deep insights into emerging technologies and practical solutions to help you stay ahead.
       </p>
       <p className="text-lg">
-        Whether you're a developer, tech enthusiast, or business owner, our content is designed to keep you informed and inspired.
+        Whether your a developer, tech enthusiast, or business owner, our content is designed to keep you informed and inspired.
       </p>
     </main>
   );

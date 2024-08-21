@@ -4,7 +4,6 @@ const ThemeToggle: React.FC = () => {
   const [darkMode, setDarkMode] = useState<boolean>(false);
 
   useEffect(() => {
-    // Check if the code is running in the browser
     if (typeof window !== 'undefined') {
       const isDarkMode = document.documentElement.classList.contains('dark');
       setDarkMode(isDarkMode);
