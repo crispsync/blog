@@ -5,12 +5,12 @@ let basePath = '';
 if (isGithubActions) {
   const repo = process.env.GITHUB_REPOSITORY.replace(/.*?\//, '');
   assetPrefix = `/${repo}/`;
-  basePath = `/${repo}`;
+  basePath = ``;
 } else {
   // Manually set the repository name
-  const repo = 'blog'; // This should match your repository name
+  const repo = ''; // This should match your repository name
   assetPrefix = `/${repo}/`;
-  basePath = `/${repo}`;
+  basePath = ``;
 }
 
 export default {
@@ -21,5 +21,5 @@ export default {
   images: {
     unoptimized: true,
   },
-  output: 'export',
+//   output: 'export',
 };
