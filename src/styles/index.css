@@ -4,6 +4,7 @@
 
 body {
   @apply font-sans bg-primaryBackground text-primaryText dark:bg-darkBackground dark:text-darkPrimaryText;
+  top: 0px !important;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -29,4 +30,42 @@ html, body, #__next {
 
 main {
   flex: 1;
+}
+
+.skiptranslate > iframe {
+  display: none;
+}
+
+
+/* Only display the element with targetLanguage in its ID */
+#__next #google_translate_element .skiptranslate.goog-te-gadget [id*="targetLanguage"] {
+  display: block !important; /* Ensure the dropdown is visible */
+  visibility: visible !important;
+}
+
+#__next #google_translate_element .skiptranslate.goog-te-gadget {
+  display:flex !important; /* Ensure the dropdown is visible */
+  position:absolute;
+  right: calc(50% - 50px);
+  top: 0px;
+  width: 20rem;
+
+  visibility: hidden !important;
+  height: 20px !important;
+}
+
+/* Ensure the dropdown has proper styling */
+#__next #google_translate_element .skiptranslate.goog-te-gadget select.goog-te-combo {
+  width: 100px;
+  font-size: 12px;
+  padding: 2px;
+  border-radius: 12px;
+  @apply font-sans dark:text-darkPrimaryText !important;
+  @apply font-sans bg-primaryBackground text-primaryText dark:bg-darkBackground dark:text-darkPrimaryText;
+  border: 1px solid #ccc;
+}
+
+#goog-gt-tt  > #goog-gt-vt {
+  display: none;
+  visibility: hidden;
 }
