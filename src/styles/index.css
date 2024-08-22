@@ -72,3 +72,8 @@ main {
   display: none !important;
   visibility: hidden !important;
 }
+
+[class^="VIpgJd"] {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
