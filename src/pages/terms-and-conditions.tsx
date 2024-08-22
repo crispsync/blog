@@ -1,7 +1,12 @@
+import Head from 'next/head';
 import React from 'react';
 
 const TermsAndConditions: React.FC = () => {
   return (
+    <>
+    <Head>
+      <title>Terms and Conditions - CrispSync</title>
+    </Head>
     <div className="space-y-12 container mx-auto p-12 max-w-3xl">
       <h1 className="text-4xl font-bold mb-4">Terms and Conditions</h1>
       <p className="mb-4">
@@ -32,6 +37,7 @@ const TermsAndConditions: React.FC = () => {
         If you have any questions about these terms and conditions, please contact us at support@crispsync.com.
       </p>
     </div>
+    </>
   );
 };
 

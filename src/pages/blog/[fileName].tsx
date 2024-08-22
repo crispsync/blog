@@ -5,6 +5,7 @@ import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import rehypeHighlight from 'rehype-highlight';
 import NewsletterBlogPost from '@/components/NewsletterBlogPost';
+import Head from 'next/head';
 
 interface BlogPostProps {
   title: string;
@@ -52,6 +53,11 @@ const BlogPost: React.FC<BlogPostProps> = ({ title, date, content }) => {
   const coffeeLink = 'https://www.buymeacoffee.com/crispsync';
 
   return (
+
+    <>
+    <Head>
+      <title>{title} - CrispSync</title>
+    </Head>
     <article className="prose dark:prose-invert mx-auto mt-12 px-8 mb-12 lg:min-w-[800px]">
       <h1>{title}</h1>
       <p><i>{date}</i></p>
@@ -85,6 +91,7 @@ const BlogPost: React.FC<BlogPostProps> = ({ title, date, content }) => {
       </div>
       <NewsletterBlogPost />
     </article>
+    </>
   );
 };
 

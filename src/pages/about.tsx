@@ -1,7 +1,12 @@
+import Head from 'next/head';
 import React from 'react';
 
 const About: React.FC = () => {
   return (
+    <>
+    <Head>
+      <title>About - CrispSync</title>
+    </Head>
     <main className="container mx-auto p-4">
       <h1 className="text-3xl font-bold mb-4">About CrispSync</h1>
       <p className="text-lg mb-4">
@@ -12,6 +17,7 @@ const About: React.FC = () => {
         Whether your a developer, tech enthusiast, or business owner, our content is designed to keep you informed and inspired.
       </p>
     </main>
+    </>
   );
 };
 

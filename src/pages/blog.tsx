@@ -1,6 +1,7 @@
 import React from 'react';
 import BlogCard from '../components/BlogCard';
 import NewsletterSignup from '../components/NewsletterSignup';
+import Head from 'next/head';
 
 const Blog: React.FC = () => {
   const posts = [
@@ -9,6 +10,10 @@ const Blog: React.FC = () => {
   ];
 
   return (
+    <>
+    <Head>
+      <title>Blog - CrispSync</title>
+    </Head>
     <main className="container mx-auto p-6 mb-12">
       <NewsletterSignup /> {/* Add the signup form here */}
       <div className="space-y-12 flex flex-col items-center">
@@ -20,6 +25,7 @@ const Blog: React.FC = () => {
         ))}
       </div>
     </main>
+    </>
   );
 };
 
