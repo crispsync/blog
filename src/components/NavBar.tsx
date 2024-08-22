@@ -4,8 +4,8 @@ import ThemeToggle from './ThemeToggle';
 
 const Navbar: React.FC = () => {
   return (
-    <nav className="bg-gray-800 text-white px-4 md:px-8 lg:px-16 mb-4">
-      <div className="flex-wrap max-w-screen-xl mx-auto flex justify-between items-center">
+    <nav className="bg-gray-800 text-white px-4 md:px-8 lg:px-16 pb-4 pt-4">
+      <div className="flex-wrap space-y-4 max-w-screen-xl mx-auto flex justify-between items-center">
         <Link href="/" className="text-2xl font-bold">
           CrispSync
         </Link>

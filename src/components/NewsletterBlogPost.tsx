@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-const NewsletterSignup: React.FC = () => {
+const NewsletterBlogPost: React.FC = () => {
   const [email, setEmail] = useState<string>('');
   const [submitted, setSubmitted] = useState<boolean>(false);
 
@@ -36,10 +36,10 @@ const NewsletterSignup: React.FC = () => {
   return (
     <section className="bg-primaryBackground dark:bg-darkBackground p-8 rounded-lg text-center mb-16 w-full md:w-3/4 lg:w-2/3 mx-auto">
       <h2 className="text-3xl font-bold mb-4 text-primaryText dark:text-darkPrimaryText">
-        Unlock the Future with Cutting-Edge AI and Technology Insights – For Free!
+        Like what you read? Unlock much more for <strong>✨ Free ✨</strong> with CrispSync Newsletter
       </h2>
       <p className="text-lg text-secondaryText dark:text-darkSecondaryText mb-6">
-        Get exclusive AI tips, tech trends, and actionable insights delivered straight to your inbox, all at no cost. Whether you’re looking to innovate or level up your career, we’ve got the tools and knowledge to help you lead in the tech world. Join our community today and stay ahead of the curve—no strings attached!
+        Get exclusive AI tips, tech trends, and actionable insights straight to your inbox. Whether you’re looking to innovate or level up your career, we’ve got the tools to help you lead in the tech world.
       </p>
       {submitted ? (
         <p className="text-lg text-green-500 dark:text-green-400">Thank you for subscribing!</p>
@@ -67,4 +67,4 @@ const NewsletterSignup: React.FC = () => {
   );
 };
 
-export default NewsletterSignup;
+export default NewsletterBlogPost;
