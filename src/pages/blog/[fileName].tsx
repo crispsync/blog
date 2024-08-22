@@ -55,9 +55,55 @@ const BlogPost: React.FC<BlogPostProps> = ({ title, date, content }) => {
   return (
 
     <>
-    <Head>
-      <title>{title} - CrispSync</title>
-    </Head>
+      <Head>
+        <title>{`${title || "Blog Post"} - CrispSync`}</title>
+        <title>Blog Post - Crispsync</title>
+        <meta name="description" content={content.substring(0, 200)} />
+        <meta property="og:title" content={`${title} - CrispSync`} />
+        <meta property="og:description" content={content.substring(0, 200)} />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content={typeof window !== "undefined" ? window.location.href : ''} />
+        <meta property="og:image" content="https://crispsync.com/images/og-image.jpg" />
+        
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={`${title} - CrispSync`} />
+        <meta name="twitter:description" content={content.substring(0, 200)} />
+        <meta name="twitter:image" content="https://crispsync.com/images/twitter-card.jpg" />
+        
+        <link rel="canonical" href={typeof window !== "undefined" ? window.location.href : ''} />
+        <meta name="robots" content="index, follow" />
+        <meta name="author" content="CrispSync" />
+        <meta name="keywords" content="AI, technology, innovation, blog, newsletter, artificial intelligence, CrispSync" />
+        
+        <script type="application/ld+json">
+          {`
+          {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": "${title}",
+            "description": "${content.substring(0, 200)}",
+            "author": {
+              "@type": "Organization",
+              "name": "CrispSync"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "CrispSync",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://crispsync.com/images/logo.png"
+              }
+            },
+            "datePublished": "${date}",
+            "image": "https://crispsync.com/images/og-image.jpg",
+            "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": "${typeof window !== "undefined" ? window.location.href : ''}"
+            }
+          }
+          `}
+        </script>
+      </Head>
     <article className="prose dark:prose-invert mx-auto mt-12 px-8 mb-12 lg:min-w-[800px]">
       <h2>{title}</h2>
       <p><i>{date}</i></p>

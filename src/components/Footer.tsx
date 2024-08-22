@@ -7,7 +7,7 @@ const Footer: React.FC = () => {
       <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
         {/* Social Media Links */}
         <div className="mb-4 md:mb-0">
-          <h4 className="text-lg font-semibold mb-2">Connect with Us</h4>
+          <h4 className="font-semibold mb-2">Connect with Us</h4>
           <div className="flex space-x-4">
             <a href="https://twitter.com/crispsync" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
               <svg className="w-6 h-6 fill-current text-white hover:text-accent" viewBox="0 0 24 24">
