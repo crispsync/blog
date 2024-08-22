@@ -45,18 +45,16 @@ main {
 
 #__next #google_translate_element .skiptranslate.goog-te-gadget {
   display:flex !important; /* Ensure the dropdown is visible */
+  top: 0px;
   position:absolute;
   right: calc(50% - 50px);
-  top: 0px;
-  width: 20rem;
-
   visibility: hidden !important;
   height: 20px !important;
 }
 
-/* Ensure the dropdown has proper styling */
 #__next #google_translate_element .skiptranslate.goog-te-gadget select.goog-te-combo {
-  width: 100px;
+  width: 8rem;
+  position:absolute;
   font-size: 12px;
   padding: 2px;
   border-radius: 12px;
@@ -65,7 +63,12 @@ main {
   border: 1px solid #ccc;
 }
 
+#goog-gt-tt {
+  display: none !important;
+  visibility: hidden !important;
+}
+
 #goog-gt-tt  > #goog-gt-vt {
-  display: none;
-  visibility: hidden;
+  display: none !important;
+  visibility: hidden !important;
 }

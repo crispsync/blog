@@ -12,7 +12,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           <div id="google_translate_element"></div>
       <Script
         strategy="afterInteractive"
-        src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+        src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit&hl=en"
       ></Script>
 
       <Script id="google-translate-init" strategy="afterInteractive">
@@ -33,8 +33,10 @@ function MyApp({ Component, pageProps }: AppProps) {
           function googleTranslateElementInit() {
             new google.translate.TranslateElement({
               pageLanguage: 'en',
-              includedLanguages: 'en,fr,es,de,zh-CN,zh-TW,ar', // Added Arabic (ar)
+              includedLanguages: 'en,fr,es,de,zh-CN,zh-TW,ar',
               autoDisplay: false,
+              multilanguagePage: false,
+              hl: 'en'
             }, 'google_translate_element');
 
             const userLang = getUserLanguage();
