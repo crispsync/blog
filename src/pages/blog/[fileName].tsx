@@ -59,7 +59,7 @@ const BlogPost: React.FC<BlogPostProps> = ({ title, date, content }) => {
       <title>{title} - CrispSync</title>
     </Head>
     <article className="prose dark:prose-invert mx-auto mt-12 px-8 mb-12 lg:min-w-[800px]">
-      <h1>{title}</h1>
+      <h2>{title}</h2>
       <p><i>{date}</i></p>
       <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeHighlight]}>
         {content}
