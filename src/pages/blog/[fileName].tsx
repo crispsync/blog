@@ -58,6 +58,7 @@ const BlogPost: React.FC<BlogPostProps> = ({ title, date, content }) => {
       <Head>
         <title>{`${title || "Blog Post"} - CrispSync`}</title>
         <title>Blog Post - Crispsync</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="description" content={content.substring(0, 200)} />
         <meta property="og:title" content={`${title} - CrispSync`} />
         <meta property="og:description" content={content.substring(0, 200)} />

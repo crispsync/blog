@@ -10,6 +10,7 @@ const TermsAndConditions: React.FC = () => {
           name="description"
           content="Review the terms and conditions for using CrispSync. By accessing our website, you agree to be bound by these terms."
         />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="robots" content="noindex, follow" />
         <meta property="og:title" content="Terms and Conditions - CrispSync" />
         <meta

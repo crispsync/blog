@@ -11,6 +11,7 @@ const PrivacyPolicy: React.FC = () => {
           content="Learn how CrispSync collects, uses, and protects your personal information. This Privacy Policy outlines your rights and our practices regarding your data."
         />
         <meta name="robots" content="noindex, follow" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta property="og:title" content="Privacy Policy - CrispSync" />
         <meta
           property="og:description"

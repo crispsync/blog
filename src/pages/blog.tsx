@@ -37,6 +37,7 @@ const Blog: React.FC = () => {
           content="Stay informed with the latest blog posts from CrispSync on technology, AI, and innovation. Subscribe to our newsletter for more insights."
         />
         <meta name="twitter:image" content="https://crispsync.com/images/twitter-card-blog.jpg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
         <link rel="canonical" href="https://crispsync.com/blog" />
         <meta name="robots" content="index, follow" />

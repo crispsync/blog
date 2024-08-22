@@ -7,6 +7,7 @@ export default function About() {
         <title>About Us - CrispSync</title>
         <meta name="description" content="Learn more about our mission, values, and the team behind CrispSync, a blog focused on technology, AI, and innovation." />
         
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta property="og:title" content="About Us - CrispSync" />
         <meta property="og:description" content="Discover our mission and the team driving CrispSync, a leading blog on technology, AI, and innovation." />
         <meta property="og:type" content="website" />

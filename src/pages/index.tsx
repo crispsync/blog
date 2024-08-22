@@ -8,6 +8,7 @@ const Home: React.FC = () => {
     <>
       <Head>
         <title>Home - CrispSync | Technology, AI, and Innovation</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta
           name="description"
           content="CrispSync is your go-to blog for the latest in technology, AI, and innovation. Explore our articles, learn new skills, and stay ahead in the tech world."

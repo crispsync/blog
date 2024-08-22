@@ -15,63 +15,65 @@ const config: Config = {
         sans: ['Montserrat', 'sans-serif'],  // Keep your font family
       },
       colors: {
-        primaryBackground: '#f8f9fa',    
-        primaryText: '#334155',         
-        secondaryText: '#64748b',        
-        accent: '#0284c7',               
-        darkBackground: '#002b36',       
-        darkPrimaryText: '#eee8d5',      
-        darkSecondaryText: '#93a1a1',    
-        darkAccent: '#cb4b16',           
+        primaryBackground: '#f8f9fa',  // Light background
+        primaryText: '#334155',  // Dark text for better contrast
+        secondaryText: '#475569',  // Slightly darker for better contrast
+        accent: '#2563eb',  // Darker blue for improved contrast
+        accentHover: '#1e40af',  // Even darker for hover state
+        darkBackground: '#002b36',  // Dark background
+        darkPrimaryText: '#eee8d5',  // Light text for dark mode
+        darkSecondaryText: '#93a1a1',  // Light text for dark mode
+        darkAccent: '#b58900',  // Lighter accent color for dark mode
+        darkAccentHover: '#cb4b16',  // Darker accent for hover in dark mode
       },
       typography: {
         DEFAULT: {
           css: {
-            color: '#334155',
+            color: '#334155',  // Primary text color
             a: {
-              color: '#38bdf8',
+              color: '#2563eb',  // Accent color
               '&:hover': {
-                color: '#0ea5e9',
+                color: '#1e40af',  // Darker accent on hover
               },
             },
             h1: {
-              color: '#334155',
+              color: '#334155',  // Primary heading color
             },
             h2: {
-              color: '#334155',
+              color: '#334155',  // Secondary heading color
             },
             blockquote: {
-              color: '#64748b',
-              borderLeftColor: '#38bdf8',
+              color: '#475569',  // Secondary text color
+              borderLeftColor: '#2563eb',  // Accent border
             },
             code: {
-              color: '#e11d48',
-              backgroundColor: '#f1f5f9',
+              color: '#e11d48',  // Code color
+              backgroundColor: '#f1f5f9',  // Light background for code
             },
           },
         },
         dark: {
           css: {
-            color: '#eee8d5',
+            color: '#eee8d5',  // Primary text color for dark mode
             a: {
-              color: '#cb4b16',
+              color: '#b58900',  // Accent color for dark mode
               '&:hover': {
-                color: '#b58900',
+                color: '#cb4b16',  // Hover color for dark mode
               },
             },
             h1: {
-              color: '#eee8d5',
+              color: '#eee8d5',  // Heading color for dark mode
             },
             h2: {
-              color: '#eee8d5',
+              color: '#eee8d5',  // Heading color for dark mode
             },
             blockquote: {
-              color: '#93a1a1',
-              borderLeftColor: '#b58900',
+              color: '#93a1a1',  // Secondary text color for dark mode
+              borderLeftColor: '#b58900',  // Accent border for dark mode
             },
             code: {
-              color: '#d33682',
-              backgroundColor: '#073642',
+              color: '#d33682',  // Code color for dark mode
+              backgroundColor: '#073642',  // Dark background for code
             },
           },
         },
@@ -88,4 +90,3 @@ const config: Config = {
 };
 
 export default config;
-
