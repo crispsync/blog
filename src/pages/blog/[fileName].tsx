@@ -101,7 +101,7 @@ const BlogPost: React.FC<BlogPostProps> = ({ title, date, content }) => {
               "image": "https://crispsync.com/images/og-image.jpg",
               "mainEntityOfPage": {
                 "@type": "WebPage",
-                "@id": "${typeof window !== undefined ? window.location.href : ''}"
+                "@id": "${typeof window !== "undefined" ? window.location.href : ''}"
               }
             }
             `,
