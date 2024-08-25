@@ -43,42 +43,45 @@ const Blog: React.FC = () => {
         <meta name="robots" content="index, follow" />
         <meta name="author" content="CrispSync" />
 
-        <script type="application/ld+json">
-          {`
-          {
-            "@context": "https://schema.org",
-            "@type": "Blog",
-            "name": "CrispSync Blog",
-            "description": "CrispSync Blog offers articles on the latest technology trends, AI, SaaS, and innovation.",
-            "url": "https://crispsync.com/blog",
-            "author": {
-              "@type": "Organization",
-              "name": "CrispSync"
-            },
-            "publisher": {
-              "@type": "Organization",
-              "name": "CrispSync",
-              "logo": {
-                "@type": "ImageObject",
-                "url": "https://crispsync.com/images/logo.png"
-              }
-            },
-            "mainEntityOfPage": {
-              "@type": "WebPage",
-              "@id": "https://crispsync.com/blog"
-            },
-            "blogPost": ${JSON.stringify(
-              posts.map(post => ({
-                "@type": "BlogPosting",
-                "headline": post.title,
-                "datePublished": post.date,
-                "url": `https://crispsync.com/blog/${post.fileName}`,
-                "description": post.summary
-              }))
-            )}
-          }
-          `}
-        </script>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: `
+            {
+              "@context": "https://schema.org",
+              "@type": "Blog",
+              "name": "CrispSync Blog",
+              "description": "CrispSync Blog offers articles on the latest technology trends, AI, SaaS, and innovation.",
+              "url": "https://crispsync.com/blog",
+              "author": {
+                "@type": "Organization",
+                "name": "CrispSync"
+              },
+              "publisher": {
+                "@type": "Organization",
+                "name": "CrispSync",
+                "logo": {
+                  "@type": "ImageObject",
+                  "url": "https://crispsync.com/images/logo.png"
+                }
+              },
+              "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": "https://crispsync.com/blog"
+              },
+              "blogPost": ${JSON.stringify(
+                posts.map(post => ({
+                  "@type": "BlogPosting",
+                  "headline": post.title,
+                  "datePublished": post.date,
+                  "url": `https://crispsync.com/blog/${post.fileName}`,
+                  "description": post.summary
+                }))
+              )}
+            }
+            `,
+          }}
+        />
       </Head>
       <main className="container mx-auto p-6 mb-12">
         <NewsletterSignup /> {/* Add the signup form here */}

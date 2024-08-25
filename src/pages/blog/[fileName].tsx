@@ -76,34 +76,37 @@ const BlogPost: React.FC<BlogPostProps> = ({ title, date, content }) => {
         <meta name="author" content="CrispSync" />
         <meta name="keywords" content="AI, technology, innovation, blog, newsletter, artificial intelligence, CrispSync" />
         
-        <script type="application/ld+json">
-          {`
-          {
-            "@context": "https://schema.org",
-            "@type": "Article",
-            "headline": "${title}",
-            "description": "${content.substring(0, 200)}",
-            "author": {
-              "@type": "Organization",
-              "name": "CrispSync"
-            },
-            "publisher": {
-              "@type": "Organization",
-              "name": "CrispSync",
-              "logo": {
-                "@type": "ImageObject",
-                "url": "https://crispsync.com/images/logo.png"
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: `
+            {
+              "@context": "https://schema.org",
+              "@type": "Article",
+              "headline": "${title}",
+              "description": "${content.substring(0, 200)}",
+              "author": {
+                "@type": "Organization",
+                "name": "CrispSync"
+              },
+              "publisher": {
+                "@type": "Organization",
+                "name": "CrispSync",
+                "logo": {
+                  "@type": "ImageObject",
+                  "url": "https://crispsync.com/images/logo.png"
+                }
+              },
+              "datePublished": "${date}",
+              "image": "https://crispsync.com/images/og-image.jpg",
+              "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": "${typeof window !== undefined ? window.location.href : ''}"
               }
-            },
-            "datePublished": "${date}",
-            "image": "https://crispsync.com/images/og-image.jpg",
-            "mainEntityOfPage": {
-              "@type": "WebPage",
-              "@id": "${typeof window !== "undefined" ? window.location.href : ''}"
             }
-          }
-          `}
-        </script>
+            `,
+          }}
+        />
       </Head>
     <article className="prose dark:prose-invert mx-auto mt-12 px-8 mb-12 lg:min-w-[800px]">
       <h2>{title}</h2>

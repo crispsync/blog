@@ -31,29 +31,32 @@ const PrivacyPolicy: React.FC = () => {
 
         <link rel="canonical" href="https://crispsync.com/privacy-policy" />
 
-        <script type="application/ld+json">
-          {`
-          {
-            "@context": "https://schema.org",
-            "@type": "WebPage",
-            "name": "Privacy Policy",
-            "url": "https://crispsync.com/privacy-policy",
-            "description": "This Privacy Policy explains how CrispSync collects, uses, and protects your personal information, and outlines your rights regarding your data.",
-            "mainEntityOfPage": {
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: `
+            {
+              "@context": "https://schema.org",
               "@type": "WebPage",
-              "@id": "https://crispsync.com/privacy-policy"
-            },
-            "publisher": {
-              "@type": "Organization",
-              "name": "CrispSync",
-              "logo": {
-                "@type": "ImageObject",
-                "url": "https://crispsync.com/images/logo.png"
+              "name": "Privacy Policy",
+              "url": "https://crispsync.com/privacy-policy",
+              "description": "This Privacy Policy explains how CrispSync collects, uses, and protects your personal information, and outlines your rights regarding your data.",
+              "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": "https://crispsync.com/privacy-policy"
+              },
+              "publisher": {
+                "@type": "Organization",
+                "name": "CrispSync",
+                "logo": {
+                  "@type": "ImageObject",
+                  "url": "https://crispsync.com/images/logo.png"
+                }
               }
             }
-          }
-          `}
-        </script>
+            `,
+          }}
+        />
       </Head>
       <div className="space-y-12 container mx-auto p-12 max-w-3xl">
         <h1 className="text-4xl font-bold mb-4">Privacy Policy</h1>

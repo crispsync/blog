@@ -15,7 +15,7 @@ export default function About() {
         <meta property="og:image" content="https://crispsync.com/images/og-image.jpg" />
         
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@YourTwitterHandle" />
+        <meta name="twitter:site" content="@crispsync" />
         <meta name="twitter:title" content="About Us - CrispSync" />
         <meta name="twitter:description" content="Explore the mission and values of CrispSync, a top blog on technology and AI." />
         <meta name="twitter:image" content="https://crispsync.com/images/twitter-card.jpg" />
@@ -25,29 +25,32 @@ export default function About() {
         <meta name="author" content="Your Name or CrispSync" />
         <meta name="keywords" content="AI, technology, innovation, blog, newsletter, artificial intelligence" />
         
-        <script type="application/ld+json">
-          {`
-          {
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            "name": "CrispSync",
-            "url": "https://crispsync.com",
-            "logo": "https://crispsync.com/images/logo.png",
-            "sameAs": [
-              "https://twitter.com/YourTwitterHandle",
-              "https://www.linkedin.com/company/yourcompany"
-            ],
-            "description": "CrispSync is a blog dedicated to the latest trends in AI, technology, and innovation.",
-            "founder": "Your Name",
-            "foundingDate": "2024",
-            "contactPoint": {
-              "@type": "ContactPoint",
-              "email": "contact@crispsync.com",
-              "contactType": "Customer Service"
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: `
+            {
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "CrispSync",
+              "url": "https://crispsync.com",
+              "logo": "https://crispsync.com/images/logo.png",
+              "sameAs": [
+                "https://twitter.com/crispsync",
+                "https://www.linkedin.com/company/crispsync"
+              ],
+              "description": "CrispSync is a blog dedicated to the latest trends in AI, technology, and innovation.",
+              "founder": "Your Name",
+              "foundingDate": "2024",
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "email": "contact@crispsync.com",
+                "contactType": "Customer Service"
+              }
             }
-          }
-          `}
-        </script>
+            `,
+          }}
+        />
       </Head>
       <div>
         <h1>About Us</h1>

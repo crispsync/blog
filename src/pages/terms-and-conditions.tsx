@@ -31,29 +31,32 @@ const TermsAndConditions: React.FC = () => {
 
         <link rel="canonical" href="https://crispsync.com/terms-and-conditions" />
 
-        <script type="application/ld+json">
-          {`
-          {
-            "@context": "https://schema.org",
-            "@type": "WebPage",
-            "name": "Terms and Conditions",
-            "url": "https://crispsync.com/terms-and-conditions",
-            "description": "These terms and conditions outline the rules and regulations for the use of CrispSync's website.",
-            "mainEntityOfPage": {
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: `
+            {
+              "@context": "https://schema.org",
               "@type": "WebPage",
-              "@id": "https://crispsync.com/terms-and-conditions"
-            },
-            "publisher": {
-              "@type": "Organization",
-              "name": "CrispSync",
-              "logo": {
-                "@type": "ImageObject",
-                "url": "https://crispsync.com/images/logo.png"
+              "name": "Terms and Conditions",
+              "url": "https://crispsync.com/terms-and-conditions",
+              "description": "These terms and conditions outline the rules and regulations for the use of CrispSync's website.",
+              "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": "https://crispsync.com/terms-and-conditions"
+              },
+              "publisher": {
+                "@type": "Organization",
+                "name": "CrispSync",
+                "logo": {
+                  "@type": "ImageObject",
+                  "url": "https://crispsync.com/images/logo.png"
+                }
               }
             }
-          }
-          `}
-        </script>
+            `,
+          }}
+        />
       </Head>
       <div className="space-y-12 container mx-auto p-12 max-w-3xl">
         <h1 className="text-4xl font-bold mb-4">Terms and Conditions</h1>

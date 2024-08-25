@@ -38,22 +38,25 @@ const Home: React.FC = () => {
         <meta name="robots" content="index, follow" />
         <meta name="author" content="CrispSync" />
 
-        <script type="application/ld+json">
-          {`
-          {
-            "@context": "https://schema.org",
-            "@type": "WebSite",
-            "name": "CrispSync",
-            "url": "https://crispsync.com/",
-            "potentialAction": {
-              "@type": "SearchAction",
-              "target": "https://crispsync.com/?s={search_term_string}",
-              "query-input": "required name=search_term_string"
-            },
-            "description": "CrispSync is a leading blog focused on the latest trends in technology, AI, and innovation. Join our community to stay ahead in the tech world."
-          }
-          `}
-        </script>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: `
+            {
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              "name": "CrispSync",
+              "url": "https://crispsync.com/",
+              "potentialAction": {
+                "@type": "SearchAction",
+                "target": "https://crispsync.com/?s={search_term_string}",
+                "query-input": "required name=search_term_string"
+              },
+              "description": "CrispSync is a leading blog focused on the latest trends in technology, AI, and innovation. Join our community to stay ahead in the tech world."
+            }
+            `,
+          }}
+        />
       </Head>
       <main className="container mx-auto p-6 text-center">
         <h1>Welcome to CrispSync</h1>
